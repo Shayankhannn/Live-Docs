@@ -7,3 +7,5 @@ jsm editor
 
 npm i jsm-editor
 npx jsm-editor add editor
+
+for authentication we use clerk
