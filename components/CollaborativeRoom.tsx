@@ -8,6 +8,7 @@ import {
     RoomProvider,
     ClientSideSuspense,
   } from "@liveblocks/react/suspense";
+import ActiveCollaborators from './ActiveCollaborators';
 
 const CollaborativeRoom = ( ) => {
   return (
@@ -16,7 +17,11 @@ const CollaborativeRoom = ( ) => {
           <div className="collaborative-room">
           <Header>
       <div className="flex w-fit items-center justify-center gap-2">
-      <p className="document-title">This is a fake title</p>
+      <p className="document-title">Share</p>
+      </div>
+      <div className="flex w-full flex-1 justify-end gap-2 sm:gap-3">
+      <ActiveCollaborators/>
+      
       <SignedOut>
               <SignInButton />
               <SignUpButton />
@@ -24,6 +29,7 @@ const CollaborativeRoom = ( ) => {
             <SignedIn>
               <UserButton />
             </SignedIn>
+      
       </div>
       </Header>
         <Editor/>
