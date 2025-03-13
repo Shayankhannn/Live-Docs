@@ -68,3 +68,10 @@ we need to create a room whenever new document is created
 to create id run npm i nanoid
 
 // TODO: document title is getting save empty fix that
+
+for live feature liek floating comments 
+
+add liveblockconfig on the object of initial config in editor.tsx
+
+this will come from installing package :
+ npm i @liveblocks/react-lexical
