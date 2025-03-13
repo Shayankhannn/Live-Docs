@@ -66,3 +66,5 @@ in route we get users const clerkUser = await currentUser();
 we need to create a room whenever new document is created
 
 to create id run npm i nanoid
+
+// TODO: document title is getting save empty fix that
