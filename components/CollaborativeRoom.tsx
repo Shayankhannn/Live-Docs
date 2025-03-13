@@ -45,21 +45,16 @@ if(e.key === 'Enter'){
 useEffect(()=>{
 const handleCLickOutside = (e:MouseEvent)=>{
   if(containerRef.current && !containerRef.current.contains(e.target as Node)){
-    setEditing(false);
+    setEditing(false);   
+    updateDocument(roomId,documentTitle);
   };
 
-  updateDocument(roomId,documentTitle);
 };
-
-
-
 document.addEventListener('mousedown',handleCLickOutside);
-
 return ()=> {
   document.removeEventListener('mousedown',handleCLickOutside);
 }
-
-},[])
+},[documentTitle,roomId])
 
 useEffect(()=>{
   if(editing && inputRef.current){
