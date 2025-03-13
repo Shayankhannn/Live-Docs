@@ -8,7 +8,7 @@ const ActiveCollaborators = () => {
     return (
     <ul className='collaborators-list'>
         {collaborators.map(({id,avatar,color,name}) => (
-            <li key={id}>
+            <li key={Date.now()}>
                 <Image
                 src={avatar}
                 alt='avatar'
@@ -17,7 +17,7 @@ const ActiveCollaborators = () => {
                 className='inline-block size-8 rounded-full ring-2 ring-dark-100 '
                 style={{border:`3px solid ${color}`}}
                 />
-                {name}
+                {/* {name} */}
             </li>
         ))}
     </ul>
